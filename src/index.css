@@ -5,9 +5,82 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #F1F1F1;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.nav{
+  background-color: black;
+  width:100%;
+  height:4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.search-box{
+  height:60%;
+  width:45%;
+  margin-top: 0.6rem;
+}
+
+.search-btn{
+  height:75%;
+  width:10%;
+  margin-top: 0.5rem;
+  background-color: rgb(212, 160, 65);
+}
+
+.tabs{
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.tabs .tab{
+  background-color: white;
+  padding: 1%;
+  margin: 0rem 0.5rem 0rem 0.5rem;
+  cursor: pointer;
+}
+
+.movie-card{
+  margin:1% 10% 1% 10%;
+  background-color: blueviolet;
+  height:17rem;
+  width:70%;
+  display: flex;
+  flex-direction: row;
+}
+
+.movie-card .left{
+  width:16%;
+  height: 100%;
+}
+
+.left img{
+  height: 100%;
+  width:100%;
+}
+
+.right{
+  width:84%;
+}
+
+.right .details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right .ratings{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding:0% 5% 0% 5%;
+  position: relative;
+  bottom: -135px;
 }

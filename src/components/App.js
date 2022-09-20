@@ -8,7 +8,7 @@ function App() {
       <Navbar/>
       <div className="main">
         <div className="tabs">
-          <div className="tab"> Movie</div>
+          <div className="tab"> Movies</div>
           <div className="tab"> Favourite</div>
         </div>
         <div className="movie-list">

@@ -3,8 +3,9 @@ import React from "react";
 class Navbar extends React.Component {
   render(){
     return (
-      <div>
-        Navbar
+      <div className="nav">
+        <input className="search-box"></input>
+        <button className="search-btn">Search</button>
       </div>
     );
   }
