@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import MovieCard from "./MovieCard";
-
+import {data} from "../data";
 function App() {
   return (
     <div className="App">
@@ -12,7 +12,9 @@ function App() {
           <div className="tab"> Favourite</div>
         </div>
         <div className="movie-list">
-          <MovieCard/>
+          {data.map((movie)=>{
+              return <MovieCard movie={movie} />
+          })}
         </div>
       </div>
     </div>
