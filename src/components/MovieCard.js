@@ -2,7 +2,7 @@ import React from "react";
 
 class MovieCard extends React.Component {
   render(){
-    console.log(this.props)
+    //console.log(this.props)
     const {movie} = this.props;
     return (
       <div className="movie-card">
