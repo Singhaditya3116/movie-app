@@ -10,13 +10,22 @@ import movies from "./reducer/index";
 const store = createStore(movies);
 
 console.log("Store ",store);
-console.log("STATE :",store.getState());
+/*console.log("BEFORE STATE :",store.getState());
+
+ store.dispatch({ /*action Object
+  type:"ADD_MOVIES",
+  movie:["Dilwale","Brahmastra"]
+})
+
+console.log("After STATE :",store.getState());
+*/
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+ 
   <React.StrictMode>
-    <App />
+    <App store={store}/>
   </React.StrictMode>
 );
 

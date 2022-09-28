@@ -1,3 +1,5 @@
 {
-  type:"ADD_MOVIE",
+  type:"ADD_MOVIES",
 }
+
+
