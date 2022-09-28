@@ -23,6 +23,18 @@ class App extends React.Component {
     console.log("DID MOUNT STATE :",this.props.store.getState());
   }
 
+  isMovieFavourite = (movie) =>{
+    const { favourites } = this.props.store.getState();
+
+    const index = favourites.indexOf(movie);
+
+    if(index === -1) //movie not found
+    {
+      return false;
+    }
+    return true; // movie found
+  }
+
   render(){
     const {store} = this.props;
     console.log("Store in APP Comp :",store.getState());
@@ -39,7 +51,12 @@ class App extends React.Component {
           </div>
           <div className="movie-list">
             {list.map((movie,index)=>{
-                return <MovieCard movie={movie} key={index}/>
+                return <MovieCard 
+                movie={movie} 
+                key={index} 
+                dispatch={store.dispatch} 
+                isFavourite = {this.isMovieFavourite(movie)}
+                />
             })}
           </div>
         </div>
