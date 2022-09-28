@@ -1,8 +1,21 @@
-export default function movies(state =[],action)
+import {ADD_MOVIES} from "../actions"
+
+
+const initialMovieState = {
+  list:[],
+  favourite:[]
+}
+
+export default function movies(state =initialMovieState,action)
 {
-  if(action.type === "ADD_MOVIES")
+  // console.log("Action :",action);
+  if(action.type === ADD_MOVIES)
   {
-    return action.movie;
+    return {
+      ...state,
+      list:action.movie
+    }
   }
   return state;
 }
+

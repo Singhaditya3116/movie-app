@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import MovieCard from "./MovieCard";
 // import { render } from "@testing-library/react";
 import {data} from "../data";
+import {addMovies} from "../actions"
 
 
 class App extends React.Component {
@@ -17,18 +18,16 @@ class App extends React.Component {
       this.forceUpdate();
     })
     
-    store.dispatch({
-      type:"ADD_MOVIES",
-      movie:data
-    })
+    store.dispatch(addMovies(data));
     
     console.log("DID MOUNT STATE :",this.props.store.getState());
   }
 
   render(){
     const {store} = this.props;
-    console.log("App store :",store);
-    const movies = store.getState();
+    console.log("Store in APP Comp :",store.getState());
+    const { list } = store.getState();
+   
     return (
     
       <div className="App">
@@ -39,7 +38,7 @@ class App extends React.Component {
             <div className="tab"> Favourite</div>
           </div>
           <div className="movie-list">
-            {movies.map((movie,index)=>{
+            {list.map((movie,index)=>{
                 return <MovieCard movie={movie} key={index}/>
             })}
           </div>
