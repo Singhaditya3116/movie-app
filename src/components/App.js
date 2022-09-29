@@ -9,6 +9,7 @@ import {addMovies} from "../actions"
 class App extends React.Component {
   
   componentDidMount(){
+    // alert("hello");
     const {store} = this.props;
     //make an API call
     //Dispatch the action.
