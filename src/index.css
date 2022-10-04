@@ -18,6 +18,16 @@ code {
   width:100%;
   height:4rem;
   display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* flex-wrap: wrap; */
+  position: relative;
+}
+
+.nav .top{
+  display: flex;
+  width: 100%;
+  height: 100%;
   justify-content: center;
 }
 
@@ -33,6 +43,16 @@ code {
   width:10%;
   margin-top: 0.6rem;
   background-color: rgb(212, 160, 65);
+  border-radius: 5px;
+}
+
+.nav .bottom{
+  position: absolute;
+  top: 3.5rem;
+  left: 22.4%;
+  background-color: cyan;
+  height: 200px;
+  width: 45.4%;
   border-radius: 5px;
 }
 
