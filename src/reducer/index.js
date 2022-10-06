@@ -57,7 +57,8 @@ export function movies(state = initialMovieState,action) //Pure Function
 
 
 const initialSearchState = {
-  result:{}
+  result:{},
+  showSearchResults:false
 };
 //search Reducer
 export function search(state=initialSearchState,action){
@@ -66,7 +67,8 @@ export function search(state=initialSearchState,action){
     case ADD_SEARCH_RESULT:
       return{
         ...state,
-        result:action.movie
+        result:action.movie,
+        showSearchResults:true
       }
     default:
       return state;

@@ -5,6 +5,7 @@ export const ADD_FAVOURITE = "ADD_FAVOURITE";
 export const DELETE_FAVOURITE = "DELETE_FAVOURITE";
 export const SET_SHOW_FAVOURITES = "SET_SHOW_FAVOURITES";
 export const ADD_SEARCH_RESULT = "ADD_SEARCH_RESULT";
+export const ADD_MOVIE_TO_LIST = "ADD_MOVIE_TO_LIST";
 
 //Action creators
 export function addMovies(movies){
@@ -38,6 +39,13 @@ export function setShowFavourites(value){
 export function addMovieSearchResult(movie){
   return {
     type:ADD_SEARCH_RESULT,
+    movie:movie
+  }
+}
+
+export function addMovieToList(movie){
+  return {
+    type:ADD_MOVIE_TO_LIST,
     movie:movie
   }
 }

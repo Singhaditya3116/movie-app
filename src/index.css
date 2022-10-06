@@ -54,6 +54,32 @@ code {
   height: 200px;
   width: 45.4%;
   border-radius: 5px;
+  display: flex;
+}
+
+.nav .bottom .left{
+  width:30%;
+  height: 100%;
+}
+
+.nav .bottom .left img{
+  width:100%;
+  height: 100%;
+}
+
+.nav .bottom .right{
+  width:50%;
+  height: 100%;
+  margin-left: 20%;
+}
+
+.bottom .right .add-to-favourite{
+  background-color: greenyellow;
+  border-radius: 5px;
+  border: 2px solid black;
+  /* box-shadow: 2px 2px 2px 2px #888888; */
+  cursor: pointer;
+  padding:0.7%;
 }
 
 .tabs{
@@ -90,7 +116,7 @@ code {
   height: 100%;
 }
 
-.left img{
+.movie-card .left img{
   height: 100%;
   width:100%;
   border-radius: 10px;
@@ -98,11 +124,11 @@ code {
   border-bottom-left-radius: 10px; */
 }
 
-.right{
+.movie-card .right{
   width:84%;
 }
 
-.right .details{
+.movie-card .right .details{
   display: flex;
   flex-direction: column;
   align-items: center;
